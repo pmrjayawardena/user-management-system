@@ -14,14 +14,14 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
-const middlewares = [];
+const middleware = [];
 
 const composeEnhancers =
 	(process.env.NODE_ENV !== 'production' &&
 		typeof window !== 'undefined' &&
 		window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
 	compose;
-const composedEnhancers = composeEnhancers(applyMiddleware(...middlewares));
+const composedEnhancers = composeEnhancers(applyMiddleware(...middleware));
 export const store = createStore(persistedReducer, undefined, composedEnhancers);
 
 export const persistor = persistStore(store);

@@ -21,7 +21,6 @@ import { useForm } from 'react-hook-form';
 export const AddUser = () => {
 	let navigate = useNavigate();
 	const dispatch = useDispatch();
-	const [loading, setLoading] = useState(false);
 	const [adding, setAdding] = useState(false);
 	const newUsersData = useSelector((state) => state.user.newUsers);
 
@@ -64,11 +63,7 @@ export const AddUser = () => {
 		navigate('/');
 	};
 
-	return loading ? (
-		<SpinnerContainer>
-			<Loader />
-		</SpinnerContainer>
-	) : (
+	return (
 		<>
 			<ToastContainer
 				position='bottom-right'

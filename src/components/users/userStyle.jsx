@@ -26,9 +26,3 @@ export const SearchBoxContainer = styled.div`
 		justify-content: space-between;
 	}
 `;
-
-export const ArrowIcons = styled.div`
-	display: 'flex';
-	alignitems: 'center';
-	justifycontent: 'start';
-`;

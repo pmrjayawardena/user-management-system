@@ -31,7 +31,6 @@ export const EditUser = () => {
 	const [loading, setLoading] = useState(false);
 	const [updating, setUpdating] = useState(false);
 	const newUsersData = useSelector((state) => state.user.newUsers);
-	const [defaultValues, setDefaultValues] = useState({});
 	const getUser = async () => {
 		setLoading(true);
 		let singleUser = usersData.filter((user) => user.id == parseInt(id));
@@ -49,9 +48,7 @@ export const EditUser = () => {
 		handleSubmit,
 		formState: { errors },
 		reset,
-	} = useForm({
-		defaultValues: defaultValues,
-	});
+	} = useForm();
 
 	const onSubmit = async (formData) => {
 		if (newUsersData.length !== 0) {
@@ -111,11 +108,6 @@ export const EditUser = () => {
 		setUpdating(false);
 
 		Toast('Updated Successfully');
-	};
-
-	const handleFormSubmit = (e) => {
-		e.preventDefault();
-		updateUserData();
 	};
 
 	const handleNavigation = () => {

@@ -32,7 +32,6 @@ export const Home = () => {
 
 	const dispatch = useDispatch();
 	const usersData = useSelector((state) => state.user.users);
-	let usersLength = usersData.length;
 	const updatedUsers = useSelector((state) => state.user.updatedUsers);
 	const currentPage = useSelector((state) => state.user.currentPage);
 	const searchTerm = useSelector((state) => state.user.term);
@@ -46,8 +45,8 @@ export const Home = () => {
 			setLoading(true);
 			let data = await fetchAllUsers(currentPage);
 			const usersDataArray = data.users;
-			let storefinal;
-			storefinal = usersDataArray.filter((item) => {
+			let storeFinal;
+			storeFinal = usersDataArray.filter((item) => {
 				if (deletedUsers.length === 0) {
 					return item;
 				} else {
@@ -57,7 +56,7 @@ export const Home = () => {
 				}
 			});
 
-			let arrCopy = storefinal.slice();
+			let arrCopy = storeFinal.slice();
 			let metaData;
 			metaData = data.meta;
 			if (updatedUsers.length !== 0) {
@@ -76,12 +75,12 @@ export const Home = () => {
 				metaData.total_pages = metaData.total_pages + 1;
 				if (metaData.page > 2) {
 					for (let newUser of newUsersData) {
-						storefinal.push(newUser);
+						storeFinal.push(newUser);
 					}
 				}
 			}
 
-			dispatch(setUsersData(storefinal));
+			dispatch(setUsersData(storeFinal));
 			dispatch(setMeta(metaData));
 			setLoading(false);
 		} catch (error) {
@@ -132,7 +131,7 @@ export const Home = () => {
 		});
 	};
 
-	let filterdData = usersData.filter((item) => {
+	let filteredData = usersData.filter((item) => {
 		if (searchTerm !== '') {
 			if (
 				item.first_name.toLowerCase().match(searchTerm?.toLowerCase()) ||
@@ -146,7 +145,7 @@ export const Home = () => {
 		}
 	});
 
-	const sorted = sort(filterdData, fieldName, sortType == 'desc' ? 1 : 0);
+	const sorted = sort(filteredData, fieldName, sortType == 'desc' ? 1 : 0);
 
 	const slicedUsers = sorted.slice(0, 6);
 	return (

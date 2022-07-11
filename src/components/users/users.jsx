@@ -6,7 +6,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import { ArrowDropUp, ArrowDropDown } from '@mui/icons-material';
@@ -22,6 +21,7 @@ import { CustomButton } from '../UI/button/button';
 import { SingleUser } from '../singleUser/singleUser';
 import { useDispatch, useSelector } from 'react-redux';
 import { setTerm } from '../../actions/userActions';
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
 	[`&.${tableCellClasses.head}`]: {
 		backgroundColor: theme.palette.info.dark,
