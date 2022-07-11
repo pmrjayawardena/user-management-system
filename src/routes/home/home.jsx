@@ -133,9 +133,9 @@ export const Home = () => {
 	let filterdData = usersData.filter((item) => {
 		if (searchTerm !== '') {
 			if (
-				item.first_name.toLowerCase().match(searchTerm.toLowerCase()) ||
-				item.last_name.toLowerCase().match(searchTerm.toLowerCase()) ||
-				item.email.toLowerCase().match(searchTerm.toLowerCase())
+				item.first_name.toLowerCase().match(searchTerm?.toLowerCase()) ||
+				item.last_name.toLowerCase().match(searchTerm?.toLowerCase()) ||
+				item.email.toLowerCase().match(searchTerm?.toLowerCase())
 			) {
 				return item;
 			}
