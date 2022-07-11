@@ -54,6 +54,6 @@ npm run build
 ## Limitations
 
 ```
--API does not return updated values when updating and creating the users.\
+-API does not return updated values when updating and creating the users.
 
 ```
