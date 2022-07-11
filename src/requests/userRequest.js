@@ -29,7 +29,7 @@ export const fetchAUser = async (id) => {
 	}
 };
 
-export const addUser = async (body, id) => {
+export const addAUser = async (body, id) => {
 	try {
 		const updated = axios.put(`${BASE_API_URL}/users/${id}`, body);
 		return updated;

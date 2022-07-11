@@ -22,6 +22,13 @@ Install packages
 npm install
 ```
 
+## Adding enviroment variables
+
+```
+create a .env file in the source folder and add the code below\
+REACT_APP_BASE_URL=https://reqres.in/api
+```
+
 ## Runing the App
 
 ```

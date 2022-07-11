@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Loader from '../UI/loader/loader';
 import { Toast } from '../UI/toast/toast';
 import { ToastContainer } from 'react-toastify';
-import { addUser } from '../../requests/userRequest';
+import { addAUser } from '../../requests/userRequest';
 import { SpinnerContainer } from '../UI/loader/loaderStyle';
 import { useSelector } from 'react-redux';
 import Stack from '@mui/material/Stack';
@@ -34,7 +34,7 @@ export const AddUser = () => {
 		let randomId = parseInt(Math.random() * (20 - 6) + 6, 10);
 
 		setAdding(true);
-		const data = await addUser({
+		const data = await addAUser({
 			first_name: formData.Firstname,
 			last_name: formData.Lastname,
 			email: formData.Email,
