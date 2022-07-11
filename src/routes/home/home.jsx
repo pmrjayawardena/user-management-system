@@ -131,11 +131,15 @@ export const Home = () => {
 	};
 
 	let filterdData = usersData.filter((item) => {
-		if (
-			item.first_name.toLowerCase().match(searchTerm.toLowerCase()) ||
-			item.last_name.toLowerCase().match(searchTerm.toLowerCase()) ||
-			item.email.toLowerCase().match(searchTerm.toLowerCase())
-		) {
+		if (searchTerm !== '') {
+			if (
+				item.first_name.toLowerCase().match(searchTerm.toLowerCase()) ||
+				item.last_name.toLowerCase().match(searchTerm.toLowerCase()) ||
+				item.email.toLowerCase().match(searchTerm.toLowerCase())
+			) {
+				return item;
+			}
+		} else {
 			return item;
 		}
 	});
