@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const UserContainer = styled.nav`
 	width: 80%;
 	margin: auto;
+	margin-top: 5rem;
 `;
 
 export const ActionButtonContainer = styled.nav`
