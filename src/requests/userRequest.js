@@ -31,8 +31,8 @@ export const fetchAUser = async (id) => {
 
 export const addAUser = async (body, id) => {
 	try {
-		const updated = axios.put(`${BASE_API_URL}/users/${id}`, body);
-		return updated;
+		const added = axios.put(`${BASE_API_URL}/users`, body);
+		return added;
 	} catch (error) {
 		return {
 			error: 'error updating the user',
