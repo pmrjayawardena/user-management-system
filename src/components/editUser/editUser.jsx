@@ -114,7 +114,6 @@ export const EditUser = () => {
 		setUpdating(false);
 
 		Toast('Updated Successfully');
-		navigate('/');
 	};
 
 	const handleFormSubmit = (e) => {
