@@ -26,6 +26,8 @@ export const FormContainer = styled.div`
 		font-size: 12px;
 		margin-top: 2px;
 		font-weight: 500;
+		text-align: left;
+		width: 100%;
 	}
 `;
 

@@ -1,5 +1,4 @@
 import { fetchAllUsers, fetchAUser, updateUser, deleteUser } from '../UserRequest';
-import axios from 'axios';
 
 describe('result of the sorted array when', () => {
 	it('should fetch the users data', async () => {

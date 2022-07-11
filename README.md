@@ -22,14 +22,14 @@ Install packages
 npm install
 ```
 
-## Adding enviroment variables
+## Adding environment variables
 
 ```
 create a .env file in the source folder and add the code below\
 REACT_APP_BASE_URL=https://reqres.in/api
 ```
 
-## Runing the App
+## Running the App
 
 ```
 npm start
@@ -45,4 +45,17 @@ npm run test
 
 ```
 npm run build
+```
+
+## Assumptions
+
+```
+-Used local storage to store new users and updated users.
+```
+
+## Limitations
+
+```
+-API does not return updated values when updating and creating the users.\
+
 ```

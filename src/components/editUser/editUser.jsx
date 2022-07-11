@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
-const ariaLabel = { 'aria-label': 'description' };
 import Loader from '../UI/loader/loader';
 import { Toast } from '../UI/toast/toast';
 import { ToastContainer } from 'react-toastify';

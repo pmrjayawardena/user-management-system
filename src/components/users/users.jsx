@@ -9,7 +9,6 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
-import DialogTitle from '@mui/material/DialogTitle';
 import { ArrowDropUp, ArrowDropDown } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 import { tableCellClasses } from '@mui/material/TableCell';
@@ -17,12 +16,7 @@ import { tableCellClasses } from '@mui/material/TableCell';
 import { Link, useNavigate, createSearchParams, useSearchParams } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import { ToastContainer } from 'react-toastify';
-import {
-	UserContainer,
-	SearchBoxContainer,
-	ActionButtonContainer,
-	ArrowIcons,
-} from './userStyle';
+import { UserContainer, SearchBoxContainer, ActionButtonContainer } from './userStyle';
 import { NoResults } from '../noResults/noResults';
 import { CustomButton } from '../UI/button/button';
 import { SingleUser } from '../singleUser/singleUser';
@@ -148,16 +142,6 @@ const Users = ({ users, deleteUser, handleSort }) => {
 				autoClose={100}
 			/>
 			<SearchBoxContainer>
-				<Link to={`/user/add`} style={{ textDecoration: 'none' }}>
-					<CustomButton
-						variant='contained'
-						disableElevation
-						size='large'
-						color='primary'
-					>
-						Add user
-					</CustomButton>
-				</Link>
 				<TextField
 					color='primary'
 					focused
@@ -168,7 +152,21 @@ const Users = ({ users, deleteUser, handleSort }) => {
 					onChange={(e) => handleSetSearch(e)}
 					size='small'
 					value={searchTerm}
+					sm={{
+						fontSize: '15px',
+						width: '100%',
+					}}
 				/>
+				<Link to={`/user/add`} style={{ textDecoration: 'none' }}>
+					<CustomButton
+						variant='contained'
+						disableElevation
+						size='large'
+						color='primary'
+					>
+						Add user
+					</CustomButton>
+				</Link>
 			</SearchBoxContainer>
 			<TableContainer component={Paper} sx={{ maxHeight: 300 }}>
 				<Table stickyHeader aria-label='simple table'>

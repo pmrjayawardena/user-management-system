@@ -32,7 +32,7 @@ export const AddUser = () => {
 
 	const addUserData = async (formData) => {
 		let randomId = parseInt(Math.random() * (20 - 6) + 6, 10);
-
+		console.log({ formData });
 		setAdding(true);
 		const data = await addAUser({
 			first_name: formData.Firstname,

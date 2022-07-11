@@ -32,6 +32,7 @@ export const Home = () => {
 
 	const dispatch = useDispatch();
 	const usersData = useSelector((state) => state.user.users);
+	let usersLength = usersData.length;
 	const updatedUsers = useSelector((state) => state.user.updatedUsers);
 	const currentPage = useSelector((state) => state.user.currentPage);
 	const searchTerm = useSelector((state) => state.user.term);
@@ -88,6 +89,7 @@ export const Home = () => {
 			Toast('Something went wrong');
 		}
 	};
+
 	useEffect(() => {
 		getUsers();
 	}, [currentPage]);

@@ -29,9 +29,10 @@ export const fetchAUser = async (id) => {
 	}
 };
 
-export const addAUser = async (body, id) => {
+export const addAUser = async (body) => {
 	try {
-		const added = axios.put(`${BASE_API_URL}/users`, body);
+		const added = axios.post(`${BASE_API_URL}/users`, body);
+
 		return added;
 	} catch (error) {
 		return {
