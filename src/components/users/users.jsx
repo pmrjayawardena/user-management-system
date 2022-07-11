@@ -109,10 +109,25 @@ const Users = ({ users, deleteUser, handleSort }) => {
 					</p>
 
 					<DialogActions>
-						<Button onClick={handleClose}>Cancel</Button>
-						<Button onClick={handleDelete} autoFocus>
+						<CustomButton
+							color='info'
+							variant='contained'
+							disableElevation
+							size='small'
+							handleOnClick={() => handleClose()}
+						>
+							Cancel
+						</CustomButton>
+
+						<CustomButton
+							color='error'
+							variant='contained'
+							disableElevation
+							size='small'
+							handleOnClick={() => handleDelete()}
+						>
 							Delete
-						</Button>
+						</CustomButton>
 					</DialogActions>
 				</Dialog>
 			</>
@@ -126,7 +141,15 @@ const Users = ({ users, deleteUser, handleSort }) => {
 					<SingleUser id={user.id} />
 
 					<DialogActions>
-						<Button onClick={handleViewClose}>Cancel</Button>
+						<CustomButton
+							color='info'
+							variant='contained'
+							disableElevation
+							size='small'
+							handleOnClick={() => handleViewClose()}
+						>
+							Cancel
+						</CustomButton>
 					</DialogActions>
 				</Dialog>
 			</>
@@ -164,7 +187,7 @@ const Users = ({ users, deleteUser, handleSort }) => {
 						size='large'
 						color='primary'
 					>
-						Add user
+						Add
 					</CustomButton>
 				</Link>
 			</SearchBoxContainer>
@@ -235,7 +258,7 @@ const Users = ({ users, deleteUser, handleSort }) => {
 										justifyContent: 'start',
 									}}
 								>
-									Emai
+									Email
 									{fieldName == 'email' ? (
 										!arrowEmail && sortType == 'desc' ? (
 											<ArrowDropUp />

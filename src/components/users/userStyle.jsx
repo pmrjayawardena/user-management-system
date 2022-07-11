@@ -15,13 +15,16 @@ export const ActionButtonContainer = styled.nav`
 	}
 `;
 
-export const SearchBoxContainer = styled.nav`
+export const SearchBoxContainer = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	margin: 2rem 0;
 	gap: 10px;
 	align-items: center;
-	flex-wrap: wrap;
+
+	@media only screen and (max-width: 500px) {
+		justify-content: space-between;
+	}
 `;
 
 export const ArrowIcons = styled.div`

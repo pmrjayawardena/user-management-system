@@ -42,6 +42,7 @@ export const SmallLoader = styled.div`
 export const ActionButtonContainer = styled.nav`
 	display: flex;
 	margin-top: 2rem;
+	width: 100%;
 	gap: 20px;
 	a {
 		text-decoration: none;
@@ -59,4 +60,14 @@ export const SubmitButton = styled.button`
     font-size: 11px;
     cursor: pointer;
 }
+`;
+export const CancelButton = styled.button`
+	border: 1px solid #01579b;
+	height: 35px;
+	border-radius: 4px;
+	width: 100%;
+	background: transparent;
+	color: #01579b;
+	font-size: 11px;
+	cursor: pointer;
 `;

@@ -45,6 +45,7 @@ export const ActionButtonContainer = styled.nav`
 	display: flex;
 	margin-top: 2rem;
 	gap: 20px;
+	width: 100%;
 	a {
 		text-decoration: none;
 		color: #000;
@@ -58,6 +59,17 @@ export const SubmitButton = styled.button`
 	width: 100%;
 	background: #01579b;
 	color: #fff;
+	font-size: 11px;
+	cursor: pointer;
+`;
+
+export const CancelButton = styled.button`
+	border: 1px solid #01579b;
+	height: 35px;
+	border-radius: 4px;
+	width: 100%;
+	background: transparent;
+	color: #01579b;
 	font-size: 11px;
 	cursor: pointer;
 `;

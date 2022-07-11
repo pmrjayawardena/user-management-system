@@ -13,6 +13,8 @@ import {
 	SubmitButton,
 	FormContainer,
 	SmallLoader,
+	ActionButtonContainer,
+	CancelButton,
 } from './addUserStyle';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
@@ -80,6 +82,19 @@ export const AddUser = () => {
 				pauseOnHover
 				limit={1}
 			/>
+			<div
+				style={{ position: 'absolute', top: '80px', left: '20px', width: '80px' }}
+			>
+				<CancelButton
+					variant='outlined'
+					size='medium'
+					type='submit'
+					className='submit-btn'
+					onClick={handleNavigation}
+				>
+					BACK
+				</CancelButton>
+			</div>
 			<UserCardContainer>
 				<Stack direction='row' spacing={2} alignItems='center'>
 					<h3 style={{ color: '#1976d2' }}> Add New User</h3>
@@ -129,29 +144,31 @@ export const AddUser = () => {
 							{errors.Email?.type === 'pattern' && (
 								<p className='errorClass'>Valid Email is required</p>
 							)}
-							<SubmitButton
-								variant='outlined'
-								size='medium'
-								type='submit'
-								className='submit-btn'
-							>
-								{adding ? (
-									<SmallLoader>
-										<Loader size={20} />
-									</SmallLoader>
-								) : (
-									'ADD'
-								)}
-							</SubmitButton>
-							<SubmitButton
-								variant='outlined'
-								size='medium'
-								type='submit'
-								className='submit-btn'
-								onClick={handleNavigation}
-							>
-								GO BACK
-							</SubmitButton>
+							<ActionButtonContainer>
+								<CancelButton
+									variant='outlined'
+									size='medium'
+									type='submit'
+									className='submit-btn'
+									onClick={handleNavigation}
+								>
+									CANCEL
+								</CancelButton>
+								<SubmitButton
+									variant='outlined'
+									size='medium'
+									type='submit'
+									className='submit-btn'
+								>
+									{adding ? (
+										<SmallLoader>
+											<Loader size={20} />
+										</SmallLoader>
+									) : (
+										'ADD'
+									)}
+								</SubmitButton>
+							</ActionButtonContainer>
 						</Stack>
 					</form>
 				</FormContainer>

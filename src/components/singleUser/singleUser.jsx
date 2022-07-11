@@ -43,7 +43,7 @@ export const SingleUser = ({ id }) => {
 				limit={1}
 			/>
 			<UserCardContainer style={{ margin: '0 20px' }}>
-				<Card sx={{ maxWidth: 600 }}>
+				<Card sx={{ maxWidth: 600 }} disableRipple>
 					<CardActionArea>
 						<CardMedia
 							component='img'

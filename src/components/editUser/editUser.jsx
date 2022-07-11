@@ -16,6 +16,8 @@ import {
 	SubmitButton,
 	FormContainer,
 	SmallLoader,
+	ActionButtonContainer,
+	CancelButton,
 } from './editUserStyle';
 import { useForm } from 'react-hook-form';
 
@@ -141,6 +143,19 @@ export const EditUser = () => {
 				pauseOnHover
 				limit={1}
 			/>
+			<div
+				style={{ position: 'absolute', top: '80px', left: '20px', width: '80px' }}
+			>
+				<CancelButton
+					variant='outlined'
+					size='medium'
+					type='submit'
+					className='submit-btn'
+					onClick={handleNavigation}
+				>
+					BACK
+				</CancelButton>
+			</div>
 			<UserCardContainer>
 				<h3 style={{ color: '#1976d2' }}>Update User</h3>
 				<Card sx={{ maxWidth: 345 }}>
@@ -201,30 +216,32 @@ export const EditUser = () => {
 							{errors.Email?.type === 'pattern' && (
 								<p className='errorClass'>Valid Email is required</p>
 							)}
-							<SubmitButton
-								variant='contained'
-								size='small'
-								type='submit'
-								disableElevation
-								className='submit-btn'
-							>
-								{updating ? (
-									<SmallLoader>
-										<Loader size={20} />
-									</SmallLoader>
-								) : (
-									'UPDATE'
-								)}
-							</SubmitButton>
-							<SubmitButton
-								variant='outlined'
-								size='medium'
-								type='submit'
-								className='submit-btn'
-								onClick={handleNavigation}
-							>
-								GO BACK
-							</SubmitButton>
+							<ActionButtonContainer>
+								<CancelButton
+									variant='outlined'
+									size='medium'
+									type='submit'
+									className='submit-btn'
+									onClick={handleNavigation}
+								>
+									CANCEL
+								</CancelButton>
+								<SubmitButton
+									variant='contained'
+									size='small'
+									type='submit'
+									disableElevation
+									className='submit-btn'
+								>
+									{updating ? (
+										<SmallLoader>
+											<Loader size={20} />
+										</SmallLoader>
+									) : (
+										'UPDATE'
+									)}
+								</SubmitButton>
+							</ActionButtonContainer>
 						</Stack>
 					</form>
 				</FormContainer>
