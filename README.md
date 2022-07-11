@@ -1,5 +1,3 @@
-## Highlevel Approch Used
-
 ### Dependencies Used
 
 Redux for the state management tool.\
