@@ -1,22 +1,16 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { CustomButton } from '../UI/button/button';
-const ariaLabel = { 'aria-label': 'description' };
+import { useNavigate } from 'react-router-dom';
 import Loader from '../UI/loader/loader';
 import { Toast } from '../UI/toast/toast';
 import { ToastContainer } from 'react-toastify';
 import { addUser } from '../../requests/userRequest';
 import { SpinnerContainer } from '../UI/loader/loaderStyle';
-import TextField from '@mui/material/TextField';
 import { useSelector } from 'react-redux';
-import { deepOrange } from '@mui/material/colors';
-import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import { setNewUsers } from '../../actions/userActions';
 import {
 	UserCardContainer,
 	SubmitButton,
-	ActionButtonContainer,
 	FormContainer,
 	SmallLoader,
 } from './addUserStyle';
@@ -27,7 +21,6 @@ export const AddUser = () => {
 	const dispatch = useDispatch();
 	const [loading, setLoading] = useState(false);
 	const [adding, setAdding] = useState(false);
-	const usersData = useSelector((state) => state.user.users);
 	const newUsersData = useSelector((state) => state.user.newUsers);
 
 	const {

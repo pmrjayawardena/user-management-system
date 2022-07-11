@@ -1,24 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
-import { CustomButton } from '../UI/button/button';
 const ariaLabel = { 'aria-label': 'description' };
 import Loader from '../UI/loader/loader';
 import { Toast } from '../UI/toast/toast';
 import { ToastContainer } from 'react-toastify';
-import { updateUser, fetchAUser } from '../../requests/userRequest';
+import { updateUser } from '../../requests/userRequest';
 import { SpinnerContainer } from '../UI/loader/loaderStyle';
-import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
-import { setNewUsers, setUpdatedUsers, setUsersData } from '../../actions/userActions';
+import { setNewUsers, setUpdatedUsers } from '../../actions/userActions';
 import { useDispatch, useSelector } from 'react-redux';
 import {
 	UserCardContainer,
 	SubmitButton,
-	ActionButtonContainer,
 	FormContainer,
 	SmallLoader,
 } from './editUserStyle';
