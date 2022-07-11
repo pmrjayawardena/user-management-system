@@ -103,7 +103,7 @@ const Users = ({ users, deleteUser, handleSort }) => {
 
 	return (
 		<UserContainer>
-			<div>
+			<>
 				<Dialog
 					open={open}
 					onClose={handleClose}
@@ -121,9 +121,9 @@ const Users = ({ users, deleteUser, handleSort }) => {
 						</Button>
 					</DialogActions>
 				</Dialog>
-			</div>
+			</>
 
-			<div>
+			<>
 				<Dialog
 					open={userView}
 					aria-labelledby='alert-dialog-title'
@@ -135,7 +135,7 @@ const Users = ({ users, deleteUser, handleSort }) => {
 						<Button onClick={handleViewClose}>Cancel</Button>
 					</DialogActions>
 				</Dialog>
-			</div>
+			</>
 			<ToastContainer
 				position='bottom-right'
 				hideProgressBar={false}

@@ -53,7 +53,7 @@ export const AddUser = () => {
 				},
 			])
 		);
-		Toast('User added Successfully');
+		Toast('User Added Successfully');
 
 		navigate('/');
 	};
