@@ -82,7 +82,7 @@ export const AddUser = () => {
 			/>
 			<UserCardContainer>
 				<Stack direction='row' spacing={2} alignItems='center'>
-					<h3 style={{ color: '#1976d2' }}> ADD NEW USER</h3>
+					<h3 style={{ color: '#1976d2' }}> Add New User</h3>
 				</Stack>
 				<FormContainer>
 					<form onSubmit={handleSubmit(addUserData)}>

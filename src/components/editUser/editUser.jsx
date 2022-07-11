@@ -143,7 +143,7 @@ export const EditUser = () => {
 				limit={1}
 			/>
 			<UserCardContainer>
-				<h3 style={{ color: '#1976d2' }}>UPDATE USER</h3>
+				<h3 style={{ color: '#1976d2' }}>Update User</h3>
 				<Card sx={{ maxWidth: 345 }}>
 					<CardActionArea>
 						<CardMedia
